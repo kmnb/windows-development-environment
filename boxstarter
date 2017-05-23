@@ -4,31 +4,31 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 Update-ExecutionPolicy Unrestricted
 
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
+//cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 
 # Packages
-cinst -y cmder -pre
+# cinst -y cmder -pre
 cinst -y hyper
 cinst -y Gow
-
-## Node, npm
-cinst -y nodejs.install
-
-## Git
-cinst -y git.install
-cinst -y poshgit
-cinst -y git-credential-winstore
-cinst -y github
+cinst -y openssh
 
 ## Node, npm
 cinst -y nodejs.install
 npm install -g npm-windows-upgrade
 
+## Git
+cinst -y git.install
+cinst -y poshgit
+cinst -y git-credential-winstore
+# cinst -y github
+
+
 ## Editors
 cinst -y visualstudiocode
 
 ## Visual Studio 2015
-cinst -y visualstudio2015community
-if (Test-PendingReboot) { Invoke-Reboot }
+#cinst -y visualstudio2015community
+#if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Ruby, Go, Python
 cinst -y ruby
