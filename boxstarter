@@ -1,10 +1,11 @@
 # Configure Windows
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
+Invoke-Expression $env:temp\postinstall.ps1
+
 Update-ExecutionPolicy Unrestricted
 
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
-//cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 
 # Packages
 # cinst -y cmder -pre
@@ -38,7 +39,7 @@ cinst -y golang
 
 cinst -y python
 cinst -y pip
-cinst -y easy.install
+#cinst -y easy.install
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
@@ -58,3 +59,6 @@ Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Google\Chrome\Application
 
 # Let's get Updates, too
 Install-WindowsUpdate -acceptEula
+
+# Run post install script
+Invoke-Expression $env:temp\postinstall.ps1
