@@ -19,8 +19,8 @@ npm install -g npm-windows-upgrade
 ## Git
 cinst -y git.install
 cinst -y poshgit
-cinst -y git-credential-winstore
-# cinst -y github
+cinst -y git-credential-manager-for-windows
+
 
 
 ## Editors
