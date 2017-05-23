@@ -1,8 +1,6 @@
 # Configure Windows
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
-Invoke-Expression $HOME\AppData\Local\Temp\postinstall.ps1
-
 Update-ExecutionPolicy Unrestricted
 
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
@@ -61,4 +59,4 @@ Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Google\Chrome\Application
 Install-WindowsUpdate -acceptEula
 
 # Run post install script
-Invoke-Expression $env:temp\postinstall.ps1
+Invoke-Expression $HOME\AppData\Local\Temp\postinstall.ps1

@@ -149,7 +149,6 @@ Python is a complex world with a bunch of flavors, but Python 3, pip, and easy_i
 ```
 cinst python
 cinst pip
-cinst easy.install
 ````
 
 ### DevOps
@@ -175,7 +174,7 @@ cinst vagrant
 If you installed CMDer or Gow as indicated above, you're already set - simply run `ssh` from CMD, CMDer, or PowerShell. If you didn't, use the official Microsoft port of OpenSSH:
 
 ```
-cinst win32-openssh
+cinst openssh
 ```
 
 #### Azure Cli
