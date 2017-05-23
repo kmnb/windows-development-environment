@@ -25,9 +25,9 @@ cinst -y git-credential-manager-for-windows
 ## Editors
 cinst -y visualstudiocode
 
-## Visual Studio 2015
-#cinst -y visualstudio2015community
-#if (Test-PendingReboot) { Invoke-Reboot }
+## Visual Studio 2017
+cinst -y visualstudio2017community
+if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Ruby, Go, Python
 cinst -y ruby
