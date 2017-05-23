@@ -1,6 +1,6 @@
 
 # Load posh-git example profile
-. 'C:\Users\felixr\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+#. 'C:\Users\felixr\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
 
 # Increase history
 $MaximumHistoryCount = 10000
