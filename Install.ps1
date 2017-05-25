@@ -10,6 +10,10 @@ function setupprofile () {
 
 if((Get-WmiObject Win32_OperatingSystem).OSArchitecture -eq "64-bit"){
     Write-Output "Installation started."
+    # Install ninite package
+    Write-Output "Downloading ninite package..."
+    Invoke-WebRequest "https://ninite.com/7zip-audacity-chrome-dropbox-googledrive-jdkx8-paint.net-qbittorrent-sharex-teamviewer12-vlc-windirstat/ninite.exe" -OutFile "ninite.exe"
+    Start-Process ninite.exe -Wait
     Write-Output "Dowloading boxstarter package"
     $ie = New-Object -com internetexplorer.application; 
     $ie.visible = $true; 
