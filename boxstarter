@@ -6,21 +6,15 @@ Update-ExecutionPolicy Unrestricted
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 
 # Packages
-# cinst -y cmder -pre
 cinst -y hyper
-cinst -y Gow
-cinst -y openssh
 
 ## Node, npm
 cinst -y nodejs.install
 npm install -g npm-windows-upgrade
 
 ## Git
-cinst -y git.install
-cinst -y poshgit
-cinst -y git-credential-manager-for-windows
-
-
+cinst -y git.install -params "/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration"
+cinst -y poshgit 
 
 ## Editors
 cinst -y visualstudiocode
@@ -29,22 +23,15 @@ cinst -y visualstudiocode
 cinst -y visualstudio2017community
 if (Test-PendingReboot) { Invoke-Reboot }
 
-## Ruby, Go, Python
-cinst -y ruby
-cinst -y ruby.devkit
-
+## Go, Python
 cinst -y golang
 
 cinst -y python
 cinst -y pip
-#cinst -y easy.install
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Basics
-cinst -y vlc
-cinst -y GoogleChrome
-cinst -y 7zip.install
 cinst -y sysinternals
 cinst -y DotNet3.5
 # cinst -y DotNet4.0 -- not needed on windows 8
