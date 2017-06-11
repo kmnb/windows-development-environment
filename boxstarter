@@ -1,8 +1,13 @@
 # Configure Windows
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Set-TaskbarSmall
-
+Set-CornerNavigationOptions -EnableUsePowerShellOnWinX
+Set-TaskbarOptions -Combine Never
 Update-ExecutionPolicy Unrestricted
+Start-Process 'powercfg.exe' -Verb runAs -ArgumentList '/h off' 
+
+# InstallChocoCoreApps
+choco install chocolatey --limitoutput
 
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 
