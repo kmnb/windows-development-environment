@@ -2,7 +2,6 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Set-TaskbarSmall
 Set-CornerNavigationOptions -EnableUsePowerShellOnWinX
-Set-TaskbarOptions -Combine Never
 Update-ExecutionPolicy Unrestricted
 Start-Process 'powercfg.exe' -Verb runAs -ArgumentList '/h off' 
 
@@ -22,6 +21,7 @@ npm install -g npm-windows-upgrade
 cinst -y git.install -params "/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration"
 cinst -y poshgit 
 cinst -y github
+cinst -y gitextensions 
 
 ## Editors
 cinst -y visualstudiocode
@@ -47,6 +47,20 @@ cinst -y sysinternals
 cinst -y GoogleChrome
 cinst -y 7zip.install
 cinst -y Firefox
+cinst -y flashplayerplugin 
+cinst -y notepadplusplus
+cinst -y launchy
+cinst -y wintail
+cinst -y bulkrenameutility
+cinst -y fscapture
+cinst -y fsresizer.install
+cinst -y kodi
+cinst -y plexmediaserver
+cinst -y steam
+cinst -y itunes
+cinst -y handbrake.install
+cinst -y steam
+cinst -y wakemeonlan
 cinst -y DotNet3.5
 # cinst -y DotNet4.0 -- not needed on windows 8
 # cinst -y DotNet4.5 -- not needed on windows 10
