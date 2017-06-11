@@ -1,4 +1,4 @@
-$url = "http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/Marsu5/windows-development-environment/master/boxstarter"
+$url = "http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/kmnb/windows-development-environment/master/boxstarter"
 function setupprofile () {
     if(Test-Path $HOME\Documents\WindowsPowerShell\){
         Copy-Item .\Microsoft.PowerShell-profile.ps1 $HOME\Documents\WindowsPowerShell\profile.ps1
