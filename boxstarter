@@ -1,5 +1,6 @@
 # Configure Windows
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+Set-TaskbarSmall
 
 Update-ExecutionPolicy Unrestricted
 
@@ -40,6 +41,7 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst -y sysinternals
 cinst -y GoogleChrome
 cinst -y 7zip.install
+cinst -y Firefox
 cinst -y DotNet3.5
 # cinst -y DotNet4.0 -- not needed on windows 8
 # cinst -y DotNet4.5 -- not needed on windows 10
