@@ -15,6 +15,7 @@ npm install -g npm-windows-upgrade
 ## Git
 cinst -y git.install -params "/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration"
 cinst -y poshgit 
+cinst -y github
 
 ## Editors
 cinst -y visualstudiocode
@@ -24,15 +25,21 @@ cinst -y visualstudio2017community
 if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Go, Python
+cinst -y ruby
+cinst -y ruby.devkit
+
 cinst -y golang
 
 cinst -y python
 cinst -y pip
+cinst -y easy.install
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Basics
 cinst -y sysinternals
+cinst -y GoogleChrome
+cinst -y 7zip.install
 cinst -y DotNet3.5
 # cinst -y DotNet4.0 -- not needed on windows 8
 # cinst -y DotNet4.5 -- not needed on windows 10
